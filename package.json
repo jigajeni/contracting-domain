@@ -1,0 +1,18 @@
+{
+  "name": "contracting-domain",
+  "version": "1.0.0",
+  "description": "Billing, deduction, cashflow and compliance rules for Indian government construction contracting. Pure functions, no dependencies.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vite": "^8.3.0",
+    "vitest": "^5.0.0"
+  }
+}
