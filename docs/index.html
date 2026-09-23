@@ -12,7 +12,11 @@
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%239C3A21'/%3E%3Cpath d='M8 9h16M8 15h16M8 21h10' stroke='%23fff' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
-  :root { color-scheme: light dark; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+  :root {
+    color-scheme: light dark;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
   body { margin: 0; font: 14px system-ui, sans-serif; }
   img { max-width: 100%; }
   [hidden] { display: none !important; }
@@ -314,6 +318,16 @@
     line-height: 1.7;
     color: var(--ink-3);
   }
+  /* The byline is the one thing in the footer a reader may want to act on,
+     so it is the one thing set at reading size. */
+  .colophon {
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0 0 14px;
+  }
+  .colophon strong { font-weight: 600; }
 
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
@@ -362,7 +376,7 @@
       <div class="stat"><b>6</b><span>legal vehicles</span></div>
       <div class="stat"><b>61</b><span>screens</span></div>
       <div class="stat"><b>37</b><span>migrations</span></div>
-      <div class="stat"><b>861</b><span>tests</span></div>
+      <div class="stat"><b>861</b><span>tests, whole system</span></div>
       <div class="stat"><b>₹1,200</b><span>per month to run</span></div>
     </div>
   </section>
@@ -529,16 +543,20 @@
       </a>
     </div>
     <p class="creds">
-      Every firm, person, supplier and identifier in the demo is invented, and it resets nightly
-      at 03:00&nbsp;IST. Write to <a href="mailto:mkjigajeni@gmail.com">mkjigajeni@gmail.com</a>
-      for a sign-in, or to talk about a system like this for your own firm.
+      <strong>demo.owner@sahyadriinfra.example</strong> &nbsp;·&nbsp; <strong>demo1234</strong><br>
+      Every firm, person, supplier and identifier in it is invented, and it resets nightly at
+      03:00&nbsp;IST — so enter a bill and watch the deductions compute. Nothing you do there
+      survives the night.<br>
+      Try <strong>demo.site1@…</strong> with the same password for the site-engineer view: one
+      column, big tap targets, and no money on the screen at all.
     </p>
 
     <h3>The domain layer, published</h3>
     <p>
       The billing, cashflow, tax and compliance rules are pure functions with no database and no
-      third-party runtime dependency at all — 43 modules and 732 tests that run in about a second.
-      That part is MIT-licensed and public; the application around it is not.
+      third-party runtime dependency at all: 43 modules, and <strong>732 of the 861 tests above
+      cover this layer alone</strong> — the rest test the application around it, which is private.
+      This part is MIT-licensed and public, and runs in about a second.
     </p>
     <figure>
       <div class="chain" style="min-width:0">
@@ -568,8 +586,12 @@
   </section>
 
   <footer class="wrap">
-    Built for A S Patil Infra Pvt Ltd · Jath, Dist. Sangli 416404<br>
-    Enquiries — <a href="mailto:mkjigajeni@gmail.com">mkjigajeni@gmail.com</a><br>
+    <p class="colophon">
+      Designed and built by <strong>Manoj Jigajeni</strong> —
+      <a href="https://github.com/jigajeni">github.com/jigajeni</a> ·
+      <a href="mailto:mkjigajeni@gmail.com">mkjigajeni@gmail.com</a>
+    </p>
+    For A S Patil Infra Pvt Ltd · Jath, Dist. Sangli 416404<br>
     Case study, 2026. Figures in the bill chain are illustrative; the structure is not.
   </footer>
 </main>

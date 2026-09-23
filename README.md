@@ -1,5 +1,8 @@
 # contracting-domain
 
+[![tests](https://github.com/jigajeni/contracting-domain/actions/workflows/test.yml/badge.svg)](https://github.com/jigajeni/contracting-domain/actions/workflows/test.yml)
+[![case study](https://img.shields.io/badge/case%20study-jigajeni.github.io-9C3A21)](https://jigajeni.github.io/contracting-domain/)
+
 The rules a civil contractor's money actually follows, as pure TypeScript
 functions with no dependencies.
 
@@ -128,9 +131,21 @@ the rule is before reading how it is implemented.
 
 ## Provenance
 
-Extracted from a private repository by a script that rewrites every name,
-firm, identifier and address it carries, then re-reads its own output and
-refuses to publish anything that still names somebody. The rules are real; the
-names in the examples are not.
+Extracted from a private repository by a script that rewrites every name, firm,
+identifier and address it carries, then re-reads its own output and refuses to
+publish anything that still names somebody. The rules are real; the names in
+the examples are not.
+
+**The short history here is an artefact of that extraction, not of the work.**
+These files were written over eight months against real departmental
+paperwork, each rule usually twice — once as it seemed to be, then again as it
+turned out to be. What arrives in this repository is the state of that private
+tree at the moment of extraction, so the commits you can read are the
+anonymiser's, not the author's. The comments carry what the history would have:
+each one says which document taught the rule, and what the earlier, wrong
+version of it did.
+
+Built by Manoj Jigajeni — [github.com/jigajeni](https://github.com/jigajeni) ·
+mkjigajeni@gmail.com
 
 MIT licensed.
